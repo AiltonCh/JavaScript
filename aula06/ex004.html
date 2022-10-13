@@ -17,8 +17,14 @@
    <script>
         var nome = prompt('Qual é seu nome?')
         var sobrenome = prompt('Qual o seu sobrenome?')
-        document.write(`Olá, <string>${nome}</string>! Seu nome tem ${nome.length + sobrenome.length} letras <br>`)
-        document.write(`Seu nome em minusculo é ${nome.toLowerCase()} e em Maiúscula é ${nome.toUpperCase()}`)
+        document.write(`Olá, <string>${nome}</string>! Seu nome tem ${nome.length + sobrenome.length} letras <br> <br>`)
+        document.write(`Seu nome em minusculo é ${nome.toLowerCase()} e em Maiúscula é ${nome.toUpperCase()} <br> <br>`)
+        var nota1 = Number(prompt('Qual sua primeira nota?'))
+        var nota2 = Number(prompt('Qual sua segunda nota?'))
+        var nota3 = Number(prompt('Qual a sua terceira nota?'))
+        var Totn = Number (nota1 + nota2 + nota3)
+        var media = Number (Totn / 3)
+        document.write(`Sua Media final, depois de somar a nota 1 (${nota1}), a nota 2 (${nota2}) e a nota 3 (${nota3}) é ` + media)
    </script> 
 </body>
 </html>
