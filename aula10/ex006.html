@@ -16,25 +16,28 @@
             text-align: center;
         }
         div#area:hover {
-            background-color: aquamarine;
-            color: black;
+            background-color: rgb(127, 138, 255);
+            color: white;
         }
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+    <div id="area">
         Interaja...
     </div>
 
     <script>
         var area = document.getElementById('area')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
         function clicar() {
-            area.innerText = 'Sangrou!'
+            area.innerText = 'Clicou!'
             area.style.background = 'red'
             area.style.color = 'white'
         }
         function entrar() {
-            area.innerText = 'Entrou! Clique'
+            area.innerText = 'Entrou! '
         }
         function sair() {
             area.innerText = 'Saiu!'
