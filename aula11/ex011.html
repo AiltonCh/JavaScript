@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <link rel="stylesheet" href="estilos/style.css">
+<body>
+    <h1>Veja sua nacionalidade</h1>
+    <fieldset id="fundo">
+    <p>Em que pais você nasceu ? </p>
+        <input type="text" name="nacs" id="nasc">
+        <input type="button" value="Verificar" onclick="nacionalidade()">
+        <div id="res">
+        </fieldset>
+
+    <script>
+       function nacionalidade (){
+        var txtn = document.querySelector('input#nasc')
+        var res = document.querySelector('div#res')
+        var nasc = (txtn.value)
+        var fundo = document.querySelector('fieldset#fundo')
+        if (nasc == "Brasil") {
+            res.innerText = `Sua resposta foi: (${nasc}) Isso faz de você Brasileiro (a) `
+        } else
+        if (nasc == "Espanha") {
+            res.innerText = `Sua resposta foi: (${nasc}) Isso faz de você Espanhol (a) `
+        } else 
+        if (nasc == "Turquia") {
+            res.innerText = `Sua resposta foi: (${nasc}) Isso faz de você Turco (a) `
+        } else 
+        if (nasc == "Estados Unidos") {
+            res.innerHTML = `Sua resposta foi: (${nasc}) Isso faz de você Americano (a)`
+        } else {
+            res.innerHTML = `Sua resposta foi: (${nasc}) Isso faz de você um (a) Estrangeiro (a)`
+            
+        }
+       }
+
+    </script>
+</body>
+</html>
