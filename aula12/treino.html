@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino de JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(imagens/fundo-cardapio.jpg);
+            background-position: left center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        fieldset {
+            font-size: 1.3;
+            margin: auto;
+            border: 35%;
+            
+            color: white;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Menu Do Restaurante.</h1>
+
+    <fieldset>
+        <p>Selecione um dia da semana</p>
+        <input type="text" name="menu" id="menu">
+        <input type="button" value="Selecionar" onclick="cardapio()">
+        <div id="res">
+    </fieldset>
+
+    <script>
+        function cardapio() {
+            var txtc = document.querySelector("input#menu")
+            var res = document.querySelector("div#res")
+            var semana = (txtc.value)
+
+            res.innerText =+ "<p>Bem vindos ao nosso restaurante</p> "
+            if (semana == "Segunda") {
+                res.innerHTML = `Você selecionou (${semana}) e o cardapio do dia é Lazanha 😋.`
+            }else if(semana == "Terça"){
+                res.innerHTML = `Você selecionou (${semana}) e o cardapio do dia é Strogonoff.`
+            }else if(semana == "Quarta" || semana == "Sabado"){
+                res.innerHTML = `Você selecionou (${semana}) e o cardapio do dia é nossa deliciosa Feijoada.`
+            }else if(semana == "Quinta"){
+                res.innerHTML = `Você selecionou (${semana}) e o cardapio do dia é Picadinho.` 
+            }else if(semana == "Sexta"){
+                res.innerHTML = `Você selecionou (${semana}) e o cardapio do dia é File de peixe.`
+            }else if(semana == "Domingo"){
+                res.innerHTML = `Você selecionou (${semana}) e infelismente não abrimos hoje.`
+            }else {
+                res.innerHTML = "<strong> [ERROR] </strong>, Digite um dia da semana válido."
+            }
+        }
+    </script>
+    
+</body>
+</html>
