@@ -1,5 +1,5 @@
-var c = 1
-while (c < 6) {
-    console.log ('Tudo bem')
-    c++
+var c = 0
+while (c < 10) {
+   console.log (`Passo ${c}`)
+    c ++
 }
