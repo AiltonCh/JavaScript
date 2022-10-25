@@ -24,15 +24,15 @@ main {
 }
 
 main img {
-    width: 60%;
-    height: 50%;
+    width: 50vw;
+    height: 50vh;
     margin: auto;
-    border-radius: 50%;
+    border-radius: 100%;
     box-sizing: border-box;
     padding: 30px;
 }
 
-div#res {
+div#res, div#img {
     text-align: center;
 }
 footer {

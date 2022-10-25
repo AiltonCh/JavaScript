@@ -3,17 +3,16 @@ function verificar () {
     var ano = data.getFullYear()
     var fano = document.getElementById("ano")
     var res = document.querySelector("div#res")
-    var img = document.getElementById("img")
     if (fano.value.length == 0 || Number(fano.value) > ano) {
         window.alert ("[ERROR] Verifique os dados e tente novamente!") }else {
             var fsex = document.getElementsByName ('txtsexo')
             var idade = ano - Number(fano.value)
             var gênero = ''
-            
+            var img = document.querySelector("div#img")
             if (fsex [0].checked){
                 gênero = " um Homem"
                 if(idade >= 0 && idade < 10){
-                    img.src = 'imagens/idade-bebe-h.jpg'
+                    img.src = "imagens/idade-bebe-h.jpg"
                 }else if (idade <21){
                     
                 }else if (idade < 50){
