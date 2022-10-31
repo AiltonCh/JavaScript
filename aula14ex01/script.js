@@ -7,12 +7,14 @@ function contador (){
     var ficont = Number(fim.value)
     var sacont = Number(salto.value)
     
-    if (inicio.value.length == 0 || fim.value.length == 0) {
+    if (inicio.value.length == 0 || fim.value.length == 0 || salto.value.length == 0) {
         window.alert("[ERROR] faltam dados!")
     } else {
         res.innerHTML = "Contando:"
+        
+        if(incont < ficont){
         for (var cont = incont; cont <=ficont; cont += sacont){
-            res.innerHTML += `${cont}🪙 `
+            res.innerHTML += `${cont}🪙`}
         }
     }
 }
