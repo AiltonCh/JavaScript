@@ -8,13 +8,23 @@ function contador (){
     var sacont = Number(salto.value)
     
     if (inicio.value.length == 0 || fim.value.length == 0 || salto.value.length == 0) {
-        window.alert("[ERROR] faltam dados!")
+        res.innerHTML = "Impossivel Contar!"
     } else {
-        res.innerHTML = "Contando:"
+        res.innerHTML = "Contando: <br>"
+        if (sacont <= 0){
+            window.alert("Passo invalido, considernado PASSO 1")
+            sacont = 1
+        }
         
         if(incont < ficont){
-        for (var cont = incont; cont <=ficont; cont += sacont){
+            //contagem crescente
+        for (var cont = incont; cont <= ficont; cont += sacont){
             res.innerHTML += `${cont}🪙`}
+        }else {
+            //contagem regressiva.
+            for (var cont = incont; cont >= ficont; cont -= sacont){
+                res.innerHTML += `${cont}🪙`
+            }
         }
     }
 }
